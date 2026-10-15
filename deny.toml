@@ -1,0 +1,24 @@
+
+
+[advisories]
+
+unmaintained = "all"
+unsound = "all"
+yanked = "deny"
+
+[licenses]
+
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "CC0-1.0",  # secp256k1 and secp256k1-sys
+    "Unicode-3.0",  # unicode-ident, via syn
+]
+
+[bans]
+multiple-versions = "allow"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]

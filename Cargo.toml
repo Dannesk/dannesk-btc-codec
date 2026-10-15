@@ -1,0 +1,21 @@
+[package]
+name = "dannesk-btc-codec"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "Bitcoin keys, addresses, transactions and signature hashes"
+repository = "https://github.com/Dannesk/dannesk-btc-codec"
+keywords = ["bitcoin", "bip32", "bip39", "bech32", "taproot"]
+categories = ["encoding", "cryptography::cryptocurrencies"]
+publish = false  # until the first release on crates.io
+
+[dependencies]
+secp256k1 = "0.33.1"  # libsecp256k1: ECDSA, Schnorr and the key tweaks
+sha2 = "0.11.0"
+ripemd = "0.2.0"
+hmac = "0.13.0"  # BIP-32 derivation and BIP-39's PBKDF2
+bs58 = { version = "0.5.1", features = ["check"] }  # base58check: legacy addresses and xpubs
+unicode-normalization = "0.1.25"  # BIP-39 normalises the phrase and the passphrase (NFKD)
+zeroize = { version = "1.9", features = ["derive"] }
+hex = "0.4.3"
